@@ -5,17 +5,15 @@ homepage: https://github.com/Ajoy-1704001/flutter_animated_reaction/blob/main/RE
 repository: https://github.com/Ajoy-1704001/flutter_animated_reaction
 
 environment:
-  sdk: '>=3.0.3 <4.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=3.0.5 <4.0.0'
+  flutter: ">=3.19.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  audioplayers: ^4.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

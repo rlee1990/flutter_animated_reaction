@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
 
 class Reaction extends StatefulWidget {
   const Reaction(
@@ -20,12 +19,10 @@ class Reaction extends StatefulWidget {
 class _ReactionState extends State<Reaction> with TickerProviderStateMixin {
   late AnimationController iconScaleController;
   late AnimationController slideController;
-  final player = AudioPlayer();
   double padding = 0;
   @override
   void initState() {
     super.initState();
-    player.audioCache.prefix = "packages/flutter_animated_reaction/";
     iconScaleController = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 200));
     slideController = AnimationController(
@@ -51,7 +48,6 @@ class _ReactionState extends State<Reaction> with TickerProviderStateMixin {
       child: GestureDetector(
         onTap: () {
           iconScaleController.forward().whenComplete(() async {
-            await player.play(AssetSource("assets/audio/pop.mp3"));
             widget.onTap(widget.index);
           });
         },
